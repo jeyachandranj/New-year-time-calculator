@@ -1,0 +1,28 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(img.jpeg);
+    background-size: cover;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.table{
+    width: 70px;
+    height: 70px;
+    text-align: center;
+}
+h5{
+    font-size: 20px;
+}
+.new{
+    font-size: 50px;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Year time table</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h5>countdown to</h5>
+    <h1 class="new">New year</h1>
+    <div class="main">
+    <div class="table">
+        <div class="time">
+            <h1 id="days">00</h1>
+            <p>days</p>
+        </div>
+    </div>
+
+    <div class="table">
+        <div class="time">
+            <h1 id="hours">00</h1>
+            <p>hours</p>
+        </div>
+    </div>
+
+    <div class="table">
+        <div class="time">
+            <h1 id="minutes">00</h1>
+            <p>minutes</p>
+        </div>
+    </div>
+
+    <div class="table">
+        <div class="time">
+            <h1 id="seconds">00</h1>
+            <p>seconds</p>
+        </div>
+    </div>
+    </div>
+    <script>
+            const days=document.querySelector("#days");
+            const hours=document.querySelector("#hours");
+            const minutes=document.querySelector("#minutes");
+            const seconds=document.querySelector("#seconds");
+
+            function time()
+            {
+                const cy=new Date().getFullYear();
+                const newyear=new Date(`january 1 ${cy+1} 00:00:00`);
+                const ct=new Date();
+                const diff=newyear-ct;
+                const d=Math.floor(diff/1000/60/60/24);
+                const h=Math.floor((diff/1000/60/60)%24);
+                const m=Math.floor((diff/1000/60)%60);
+                const s=Math.floor((diff/1000)%60);
+                days.innerHTML=d;
+                hours.innerHTML=h;
+                minutes.innerHTML=m;
+                seconds.innerHTML=s;
+
+            }
+            setInterval(time,1000);
+    </script>
+</body>
+</html>
